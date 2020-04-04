@@ -22,7 +22,7 @@ namespace MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Lykke.Service.BonusCustomerProfile.MsSqlRepositories.Entities.CampaignsContribution", b =>
+            modelBuilder.Entity("MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Entities.CampaignsContribution", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -41,7 +41,7 @@ namespace MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Migrations
                     b.ToTable("campaigns_contribution");
                 });
 
-            modelBuilder.Entity("Lykke.Service.BonusCustomerProfile.MsSqlRepositories.Entities.CustomerProfile", b =>
+            modelBuilder.Entity("MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Entities.CustomerProfile", b =>
                 {
                     b.Property<Guid>("CustomerId")
                         .ValueGeneratedOnAdd()
