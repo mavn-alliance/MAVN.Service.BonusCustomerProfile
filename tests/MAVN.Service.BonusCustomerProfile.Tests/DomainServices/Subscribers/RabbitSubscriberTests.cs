@@ -1,9 +1,10 @@
-using Lykke.Logs;
+﻿using Lykke.Logs;
 using MAVN.Service.BonusCustomerProfile.Domain.Services;
 using MAVN.Service.BonusCustomerProfile.DomainServices.Subscribers;
 using Moq;
 using System;
 using System.Threading.Tasks;
+using Lykke.Service.BonusEngine.Contract.Events;
 using MAVN.Service.BonusCustomerProfile.Domain.Models.Campaign;
 using Xunit;
 
@@ -24,7 +25,7 @@ namespace MAVN.Service.BonusCustomerProfile.Tests.DomainServices.Subscribers
                 campaignServiceMock.Object,
                 customerProfileServiceMock.Object);
 
-            await subscriber.StartProcessingAsync(new BonusEngine.Contract.Events.ParticipatedInCampaignEvent()
+            await subscriber.StartProcessingAsync(new ParticipatedInCampaignEvent()
             {
                 CampaignId = "not valid",
                 CustomerId = Guid.NewGuid().ToString("D")
@@ -48,7 +49,7 @@ namespace MAVN.Service.BonusCustomerProfile.Tests.DomainServices.Subscribers
                 campaignServiceMock.Object, 
                 customerProfileServiceMock.Object);
 
-            await subscriber.StartProcessingAsync(new BonusEngine.Contract.Events.ParticipatedInCampaignEvent()
+            await subscriber.StartProcessingAsync(new ParticipatedInCampaignEvent()
             {
                 CampaignId = "not valid",
                 CustomerId = "not valid"
@@ -72,7 +73,7 @@ namespace MAVN.Service.BonusCustomerProfile.Tests.DomainServices.Subscribers
                 campaignServiceMock.Object,
                 customerProfileServiceMock.Object);
 
-            await subscriber.StartProcessingAsync(new BonusEngine.Contract.Events.ParticipatedInCampaignEvent()
+            await subscriber.StartProcessingAsync(new ParticipatedInCampaignEvent()
             {
                 CampaignId = Guid.NewGuid().ToString("D"),
                 CustomerId = Guid.NewGuid().ToString("D")
