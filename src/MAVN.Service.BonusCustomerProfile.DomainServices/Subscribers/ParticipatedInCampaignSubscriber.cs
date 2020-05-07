@@ -1,11 +1,10 @@
+﻿using System;
+using System.Threading.Tasks;
+using Common.Log;
 using Lykke.Common.Log;
 using MAVN.Service.BonusCustomerProfile.Domain.Models.Campaign;
 using MAVN.Service.BonusCustomerProfile.Domain.Services;
-using Lykke.Service.BonusEngine.Contract.Events;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Common.Log;
+using MAVN.Service.BonusEngine.Contract.Events;
 
 namespace MAVN.Service.BonusCustomerProfile.DomainServices.Subscribers
 {
@@ -23,9 +22,9 @@ namespace MAVN.Service.BonusCustomerProfile.DomainServices.Subscribers
             ICustomerProfileService customerProfileService)
             : base(connectionString, exchangeName, logFactory)
         {
-            _campaignService = campaignService 
+            _campaignService = campaignService
                                ?? throw new ArgumentNullException(nameof(campaignService));
-            _customerProfileService = customerProfileService 
+            _customerProfileService = customerProfileService
                                       ?? throw new ArgumentNullException(nameof(customerProfileService));
             _log = logFactory.CreateLog(this);
 
@@ -44,8 +43,8 @@ namespace MAVN.Service.BonusCustomerProfile.DomainServices.Subscribers
             {
                 await _campaignService.InsertAsync(new CampaignsContributionModel
                 {
-                     CampaignId = message.CampaignId,
-                     CustomerId = message.CustomerId
+                    CampaignId = message.CampaignId,
+                    CustomerId = message.CustomerId
                 });
 
                 await _customerProfileService.ProcessParticipatedInCampaignEvent(customerId);

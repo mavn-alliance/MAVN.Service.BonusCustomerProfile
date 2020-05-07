@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <Version>1.0.0</Version>
@@ -6,14 +6,14 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
-    <PackageReference Include="Falcon.Service.BonusCustomerProfile.Client" Version="1.0.4" />
-    <PackageReference Include="Falcon.Service.BonusEngine.Contract" Version="2.0.0" />
-    <PackageReference Include="Falcon.Service.CustomerManagement.Contract" Version="6.0.0" />
-    <PackageReference Include="Falcon.Service.Referral.Contract" Version="5.0.0" />
-    <PackageReference Include="Falcon.Service.CurrencyConvertor.Client" Version="4.0.0" />
-    <PackageReference Include="Falcon.Service.PartnersIntegration.Contract" Version="1.0.0" />
-    <PackageReference Include="Falcon.Service.Vouchers.Contract" Version="1.1.0" />
     <PackageReference Include="Lykke.RabbitMqBroker" Version="7.13.1" />
+    <PackageReference Include="MAVN.Service.BonusCustomerProfile.Client" Version="1.0.1" />
+    <PackageReference Include="MAVN.Service.BonusEngine.Contract" Version="1.0.1" />
+    <PackageReference Include="MAVN.Service.CurrencyConverter.Client" Version="1.0.1" />
+    <PackageReference Include="MAVN.Service.CustomerManagement.Contract" Version="1.1.0" />
+    <PackageReference Include="MAVN.Service.PartnersIntegration.Contract" Version="1.0.1" />
+    <PackageReference Include="MAVN.Service.Referral.Contract" Version="2.0.0" />
+    <PackageReference Include="MAVN.Service.Vouchers.Contract" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\client\MAVN.Service.BonusCustomerProfile.Client\MAVN.Service.BonusCustomerProfile.Client.csproj" />

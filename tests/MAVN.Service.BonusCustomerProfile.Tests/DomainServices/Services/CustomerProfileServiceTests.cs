@@ -1,15 +1,13 @@
-using Lykke.Logs;
+﻿using Lykke.Logs;
 using MAVN.Service.BonusCustomerProfile.Domain.Models.CustomerProfile;
 using MAVN.Service.BonusCustomerProfile.Domain.Repositories;
 using MAVN.Service.BonusCustomerProfile.DomainServices.Services;
 using MAVN.Service.BonusCustomerProfile.Tests.DomainServices.Mocks;
-using Lykke.Service.CurrencyConvertor.Client;
 using Moq;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 using MAVN.Service.BonusCustomerProfile.Domain.Services;
-using Lykke.Service.CurrencyConvertor.Client.Models.Requests;
 using Xunit;
 
 namespace MAVN.Service.BonusCustomerProfile.Tests.DomainServices.Services

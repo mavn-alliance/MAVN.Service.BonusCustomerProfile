@@ -1,11 +1,11 @@
-using Lykke.Common.Log;
+﻿using Lykke.Common.Log;
 using MAVN.Service.BonusCustomerProfile.Domain.Services;
-using Lykke.Service.Referral.Contract.Events;
+using MAVN.Service.Referral.Contract.Events;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
-using Lykke.Service.CustomerManagement.Contract.Events;
+using MAVN.Service.CustomerManagement.Contract.Events;
 
 namespace MAVN.Service.BonusCustomerProfile.DomainServices.Subscribers
 {

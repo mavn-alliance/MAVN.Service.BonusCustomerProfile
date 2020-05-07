@@ -1,11 +1,11 @@
-﻿using Lykke.Logs;
+using Lykke.Logs;
 using MAVN.Service.BonusCustomerProfile.Domain.Services;
 using MAVN.Service.BonusCustomerProfile.DomainServices.Subscribers;
 using Moq;
 using System;
 using System.Threading.Tasks;
 using MAVN.Service.BonusCustomerProfile.Domain.Models.Campaign;
-using Lykke.Service.BonusEngine.Contract.Events;
+using MAVN.Service.BonusEngine.Contract.Events;
 using Xunit;
 
 namespace MAVN.Service.BonusCustomerProfile.Tests.DomainServices.Subscribers
