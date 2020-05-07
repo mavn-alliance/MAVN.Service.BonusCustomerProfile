@@ -1,16 +1,10 @@
+﻿using System.Threading.Tasks;
 using Lykke.Logs;
-using MAVN.Service.BonusCustomerProfile.Domain.Models.Campaign;
-using MAVN.Service.BonusCustomerProfile.Domain.Repositories;
 using MAVN.Service.BonusCustomerProfile.DomainServices.Services;
-using MAVN.Service.BonusCustomerProfile.Tests.DomainServices.Mocks;
+using MAVN.Service.CurrencyConvertor.Client;
+using MAVN.Service.CurrencyConvertor.Client.Models.Enums;
+using MAVN.Service.CurrencyConvertor.Client.Models.Responses;
 using Moq;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Lykke.Service.CurrencyConvertor.Client;
-using Lykke.Service.CurrencyConvertor.Client.Models.Enums;
-using Lykke.Service.CurrencyConvertor.Client.Models.Requests;
-using Lykke.Service.CurrencyConvertor.Client.Models.Responses;
 using Xunit;
 
 namespace MAVN.Service.BonusCustomerProfile.Tests.DomainServices.Services
@@ -22,7 +16,7 @@ namespace MAVN.Service.BonusCustomerProfile.Tests.DomainServices.Services
         {
             // Arrange
             var currencyConvertorClientMock = new Mock<ICurrencyConvertorClient>();
-            
+
             var service = new CurrencyConvertorService(currencyConvertorClientMock.Object, "USD", EmptyLogFactory.Instance);
 
             currencyConvertorClientMock.Setup(r => r.Converter.ConvertAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<decimal>()))

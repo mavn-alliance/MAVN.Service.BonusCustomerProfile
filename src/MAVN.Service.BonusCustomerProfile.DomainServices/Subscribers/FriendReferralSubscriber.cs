@@ -1,13 +1,9 @@
-using Lykke.Common.Log;
-using MAVN.Service.BonusCustomerProfile.Domain.Models.Campaign;
+﻿using Lykke.Common.Log;
 using MAVN.Service.BonusCustomerProfile.Domain.Services;
-using Lykke.Service.BonusEngine.Contract.Events;
 using System;
-using System.Collections.Generic;
-using System.Reflection;
 using System.Threading.Tasks;
 using Common.Log;
-using Lykke.Service.Referral.Contract.Events;
+using MAVN.Service.Referral.Contract.Events;
 
 namespace MAVN.Service.BonusCustomerProfile.DomainServices.Subscribers
 {

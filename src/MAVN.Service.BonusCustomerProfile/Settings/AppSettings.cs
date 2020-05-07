@@ -1,6 +1,6 @@
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using Lykke.Sdk.Settings;
-using Lykke.Service.CurrencyConvertor.Client;
+using MAVN.Service.CurrencyConvertor.Client;
 
 namespace MAVN.Service.BonusCustomerProfile.Settings
 {

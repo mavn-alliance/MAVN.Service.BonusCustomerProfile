@@ -1,4 +1,4 @@
-using Autofac;
+﻿using Autofac;
 using JetBrains.Annotations;
 using Lykke.Sdk;
 using MAVN.Service.BonusCustomerProfile.Domain.Services;
@@ -6,7 +6,7 @@ using MAVN.Service.BonusCustomerProfile.DomainServices.Services;
 using MAVN.Service.BonusCustomerProfile.MsSqlRepositories;
 using MAVN.Service.BonusCustomerProfile.Services;
 using MAVN.Service.BonusCustomerProfile.Settings;
-using Lykke.Service.CurrencyConvertor.Client;
+using MAVN.Service.CurrencyConvertor.Client;
 using Lykke.SettingsReader;
 
 namespace MAVN.Service.BonusCustomerProfile.Modules

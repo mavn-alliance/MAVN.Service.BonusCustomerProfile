@@ -4,8 +4,7 @@ using MAVN.Service.BonusCustomerProfile.DomainServices.Subscribers;
 using Moq;
 using System;
 using System.Threading.Tasks;
-using Lykke.Service.BonusEngine.Contract.Events;
-using MAVN.Service.BonusCustomerProfile.Domain.Models.Campaign;
+using MAVN.Service.BonusEngine.Contract.Events;
 using Xunit;
 
 namespace MAVN.Service.BonusCustomerProfile.Tests.DomainServices.Subscribers

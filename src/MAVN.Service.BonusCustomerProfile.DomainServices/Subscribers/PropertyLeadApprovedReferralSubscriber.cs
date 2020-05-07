@@ -1,6 +1,6 @@
-using Lykke.Common.Log;
+﻿using Lykke.Common.Log;
 using MAVN.Service.BonusCustomerProfile.Domain.Services;
-using Lykke.Service.Referral.Contract.Events;
+using MAVN.Service.Referral.Contract.Events;
 using System;
 using System.Threading.Tasks;
 

@@ -1,6 +1,4 @@
-using MAVN.Service.BonusCustomerProfile.Domain.Models.Campaign;
-using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace MAVN.Service.BonusCustomerProfile.Domain.Services
 {
