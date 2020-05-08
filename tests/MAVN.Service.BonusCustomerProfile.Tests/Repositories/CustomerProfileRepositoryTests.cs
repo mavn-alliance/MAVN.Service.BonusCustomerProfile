@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.BonusCustomerProfile.Domain.Models.CustomerProfile;
 using MAVN.Service.BonusCustomerProfile.MsSqlRepositories;
 using MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Repositories;

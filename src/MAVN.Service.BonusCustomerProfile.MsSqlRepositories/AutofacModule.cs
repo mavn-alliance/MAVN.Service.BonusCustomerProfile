@@ -1,5 +1,5 @@
 using Autofac;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.BonusCustomerProfile.Domain.Repositories;
 using MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Repositories;
 

@@ -1,5 +1,5 @@
 using System.Data.Common;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Entities;
 using Microsoft.EntityFrameworkCore;
 
