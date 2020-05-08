@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.BonusCustomerProfile.Domain.Models.Campaign;
 using MAVN.Service.BonusCustomerProfile.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
