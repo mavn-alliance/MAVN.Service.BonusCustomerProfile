@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.BonusCustomerProfile.Domain.Models.Campaign;
 using MAVN.Service.BonusCustomerProfile.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -11,11 +11,11 @@ namespace MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Repositories
 {
     public class CampaignsContributionRepository : ICampaignsContributionRepository
     {
-        private readonly MsSqlContextFactory<BonusCustomerProfileContext> _msSqlContextFactory;
+        private readonly PostgreSQLContextFactory<BonusCustomerProfileContext> _msSqlContextFactory;
         private readonly IMapper _mapper;
 
         public CampaignsContributionRepository(
-            MsSqlContextFactory<BonusCustomerProfileContext> msSqlContextFactory,
+            PostgreSQLContextFactory<BonusCustomerProfileContext> msSqlContextFactory,
             IMapper mapper)
         {
             _msSqlContextFactory = msSqlContextFactory 

@@ -1,11 +1,11 @@
-using System.Data.Common;
-using MAVN.Common.MsSql;
+﻿using System.Data.Common;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Service.BonusCustomerProfile.MsSqlRepositories
 {
-    public class BonusCustomerProfileContext : MsSqlContext
+    public class BonusCustomerProfileContext : PostgreSQLContext
     {
         private const string Schema = "bonus_customer_profile";
 
@@ -33,11 +33,7 @@ namespace MAVN.Service.BonusCustomerProfile.MsSqlRepositories
         {
         }
 
-        protected override void OnLykkeConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-        }
-
-        protected override void OnLykkeModelCreating(ModelBuilder modelBuilder)
+        protected override void OnMAVNModelCreating(ModelBuilder modelBuilder)
         {
             var campaignsContributionsBuilder = modelBuilder.Entity<CampaignsContribution>();
             campaignsContributionsBuilder.HasIndex(c => new

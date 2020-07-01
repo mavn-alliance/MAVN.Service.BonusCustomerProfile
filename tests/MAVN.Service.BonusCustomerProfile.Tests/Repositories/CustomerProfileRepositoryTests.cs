@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.BonusCustomerProfile.Domain.Models.CustomerProfile;
 using MAVN.Service.BonusCustomerProfile.MsSqlRepositories;
 using MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Repositories;
@@ -21,7 +21,7 @@ namespace MAVN.Service.BonusCustomerProfile.Tests.Repositories
 
             var bonusCustomerProfileContext = contextFixture.BonusCustomerProfileContext;
 
-            var msSqlContextFactory = new MsSqlContextFactory<BonusCustomerProfileContext>(
+            var msSqlContextFactory = new PostgreSQLContextFactory<BonusCustomerProfileContext>(
                 dbCtxOptions => bonusCustomerProfileContext, contextFixture.DbContextOptions);
 
             _customerProfileRepository = new CustomerProfileRepository(msSqlContextFactory, mapper);
