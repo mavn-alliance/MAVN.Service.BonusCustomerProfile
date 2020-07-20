@@ -1,11 +1,12 @@
-using System;
-using System.Data.SqlClient;
+﻿using System;
 using System.Threading.Tasks;
 using AutoMapper;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.BonusCustomerProfile.Domain.Models.CustomerProfile;
 using MAVN.Service.BonusCustomerProfile.Domain.Repositories;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
 
 namespace MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Repositories
 {
@@ -13,11 +14,11 @@ namespace MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Repositories
     {
         private const int PrimaryKeyViolationErrorCode = 2627;
 
-        private readonly MsSqlContextFactory<BonusCustomerProfileContext> _msSqlContextFactory;
+        private readonly PostgreSQLContextFactory<BonusCustomerProfileContext> _msSqlContextFactory;
         private readonly IMapper _mapper;
 
         public CustomerProfileRepository(
-            MsSqlContextFactory<BonusCustomerProfileContext> msSqlContextFactory,
+            PostgreSQLContextFactory<BonusCustomerProfileContext> msSqlContextFactory,
             IMapper mapper)
         {
             _msSqlContextFactory = msSqlContextFactory ?? throw new ArgumentNullException(nameof(msSqlContextFactory));
@@ -48,8 +49,8 @@ namespace MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Repositories
                 }
                 catch (DbUpdateException e)
                 {
-                    if (e.InnerException is SqlException sqlException &&
-                        sqlException.Number == PrimaryKeyViolationErrorCode)
+                    if (e.InnerException is PostgresException sqlException &&
+                        sqlException.SqlState == PostgresErrorCodes.UniqueViolation)
                     {
                         return false;
                     }

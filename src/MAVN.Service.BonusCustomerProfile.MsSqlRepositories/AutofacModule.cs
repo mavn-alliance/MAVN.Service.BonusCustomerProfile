@@ -1,5 +1,5 @@
-using Autofac;
-using MAVN.Common.MsSql;
+﻿using Autofac;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.BonusCustomerProfile.Domain.Repositories;
 using MAVN.Service.BonusCustomerProfile.MsSqlRepositories.Repositories;
 
@@ -16,7 +16,7 @@ namespace MAVN.Service.BonusCustomerProfile.MsSqlRepositories
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterMsSql(_connectionString,
+            builder.RegisterPostgreSQL(_connectionString,
                 connectionString => new BonusCustomerProfileContext(connectionString, false),
                 dbConnection => new BonusCustomerProfileContext(dbConnection));
             
